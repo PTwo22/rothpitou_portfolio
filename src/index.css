@@ -1,110 +1,152 @@
-/* :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* @import url('https://cdn.jsdelivr.net/gh/ctrlcctrlv/pixelfont-css/pixelfy-sans.css'); */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+  /* source: https://cartr.gitlab.io/undertale-fonts/ */
+  font-family: "Determination Mono";
+  src: url("./assets/fonts/DeterminationMonoWeb.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
+  /* font-family: 'Pixelfy Sans', monospace; */
+  font-family: "Determination Mono", monospace;
+  background: #e0e0e0;
+  height: 100vh;
   margin: 0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+  
+.pixel-box {
+  padding: 2rem;
+  border: 4px solid black;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px #000, 8px 8px 0 0 #000;
+  text-align: center;
+  max-width: 90%;
+}
+.middle {
+  margin: 1rem 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.pixel-box button.middle {
+  padding: 0.75rem 1.25rem;
+  background: black;
+  color: white;
+  border: none;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  font-family: inherit;
+  font-size: 150%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-/* @import url('https://cdn.jsdelivr.net/gh/ctrlcctrlv/pixelfont-css/pixelfy-sans.css'); */
-/* @import url('https://cartr.gitlab.io/undertale-fonts/'); */
+.pixel-box button.middle:hover {
+  transform: scale(1);
+  box-shadow: 0 0 0 3px #e0e0e0, 4px 4px 0 0 #000;
+}
 
-/* <link rel="stylesheet" type="text/css" href="//undertalefonts.duodecima.technology/webfonts/stylesheet.css"> */
-body {
-    font-family: 'Pixelfy Sans', monospace;
-    background: #e0e0e0;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.startpage p.middle{
+  font-size: 120%;
+}
   
-  .pixel-box {
-    padding: 2rem;
-    border: 4px solid black;
-    background-color: #fff;
-    box-shadow: 0 0 0 4px #000, 8px 8px 0 0 #000;
-    text-align: center;
-    max-width: 90%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #f6aca2;
+  --color-secondary: #f49b90;
+  --color-tertiary: #f28b7d;
+  --color-quaternary: #f07a6a;
+  --color-quinary: #ee6352;
+}
+
+.content {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.text-shadows {
+  /* text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary); */
+  /* font-family: bungee, sans-serif; */
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  font-size: calc(2rem + 2vw);
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  /* animation: shadows 1.2s ease-in infinite; */
+  letter-spacing: 0.4rem;
+}
+.text-shadows:hover {
+  text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+  /* font-family: bungee, sans-serif; */
+  font-weight: 400;
+  /* text-transform: uppercase; */
+  font-size: calc(2rem + 2vw);
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 1.2s ease-in infinite;
+  letter-spacing: 0.4rem;
+}
+/* source: */
+@keyframes shadows {
+  0% {
+    text-shadow: none;
   }
-  
-  .middle {
-    margin: 1rem 0;
+  10% {
+    transform: translate(-3px, -3px);
+    text-shadow: 3px 3px 0 var(--color-secondary);
   }
-  
-  .pixel-box button.middle {
-    padding: 0.75rem 1.25rem;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-family: inherit;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  20% {
+    transform: translate(-6px, -6px);
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
   }
-  
-  .pixel-box button.middle:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 3px #000, 4px 4px 0 0 #000;
+  30% {
+    transform: translate(-9px, -9px);
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
   }
-  
+  40% {
+    transform: translate(-12px, -12px);
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  50% {
+    transform: translate(-12px, -12px);
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary),
+      12px 12px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary), 9px 9px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 3px 3px 0 var(--color-secondary),
+      6px 6px 0 var(--color-tertiary);
+  }
+  90% {
+    text-shadow: 3px 3px 0 var(--color-secondary);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
