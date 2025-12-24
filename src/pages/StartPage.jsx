@@ -2,7 +2,8 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import clickSound from '../assets/sounds/undertale-ding.mp3';
+// import clickSound from '../assets/sounds/undertale-ding.mp3';
+import clickSound from '/public/sounds/undertale-ding.mp3';
 
 
 function StartPage(){

@@ -3,7 +3,8 @@
 @font-face {
   /* source: https://cartr.gitlab.io/undertale-fonts/ */
   font-family: "Determination Mono";
-  src: url("./assets/fonts/DeterminationMonoWeb.ttf") format("truetype");
+  /* src: url("./assets/fonts/DeterminationMonoWeb.ttf") format("truetype"); */
+  src: url("../public/fonts/DeterminationMonoWeb.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -72,25 +73,18 @@ body {
 }
 
 .text-shadows {
-  /* text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
-    9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary); */
-  /* font-family: bungee, sans-serif; */
   font-weight: 400;
-  /* text-transform: uppercase; */
   font-size: calc(2rem + 2vw);
   font-weight: 300;
   text-align: center;
   margin: 0;
   color: var(--color-primary);
-  /* animation: shadows 1.2s ease-in infinite; */
   letter-spacing: 0.4rem;
 }
 .text-shadows:hover {
   text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
     9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
-  /* font-family: bungee, sans-serif; */
   font-weight: 400;
-  /* text-transform: uppercase; */
   font-size: calc(2rem + 2vw);
   font-weight: 300;
   text-align: center;
@@ -99,7 +93,7 @@ body {
   animation: shadows 1.2s ease-in infinite;
   letter-spacing: 0.4rem;
 }
-/* source: */
+
 @keyframes shadows {
   0% {
     text-shadow: none;
