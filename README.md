@@ -7,3 +7,5 @@
 - Etc.
 
 > Made to be interactive and fun (who needs basic interfaces and best practices when you have fun). Some bits sprinkled from my limited experiences in game development (partially/heavily inspired by Undertale).
+
+> All sprites and tiles used are original assets. Fonts and sounds are sourced from online.
