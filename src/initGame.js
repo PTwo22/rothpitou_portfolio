@@ -2,6 +2,7 @@
 import { PALETTE } from "./constants";
 import makePlayer from "./entities/Player";
 import makeKaplayCtx from "./kaplayCtx";
+import { cameraZoomValueAtom, store } from "./store";
 
 // ! can't use default async for some reason - will investigate later (maybe)
 export async function initGame(){ // async because we'll load json files
@@ -45,11 +46,18 @@ export async function initGame(){ // async because we'll load json files
     // k.loadShaderURL("tiledPattern", null, "./shaders/tiledPattern.frag");
 
     if (k.width() < 1000) {
-        k.camScale(k.vec2(0.5));
-        return;
+        store.set(cameraZoomValueAtom, 0.5);
+        k.camScale(k.vec2(0.5)); // on smaller screens, set a lower zoom
     }else{
+        store.set(cameraZoomValueAtom, 0.8);
         k.camScale(k.vec2(0.8));
     }
+
+    k.onUpdate(() => {
+        const camZoomValue = store.get(cameraZoomValueAtom);
+        if(camZoomValue !== k.camScale())
+            k.camScale(k.vec2(camZoomValue));
+    });
 
 
     // const tiledBackground = k.add([

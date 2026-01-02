@@ -1,4 +1,5 @@
 import { DIAGONAL_FACTOR } from "../constants";
+import { isSocialModalVisibleAtom, isEmailModalVisibleAtom, isProjectModalVisibleAtom, store } from "../store";
 
 export default function makePlayer(k, posVec2, speed){
 
@@ -46,6 +47,9 @@ export default function makePlayer(k, posVec2, speed){
                 k.easings.linear,
             ); 
         }
+
+        if(store.get(isSocialModalVisibleAtom) || store.get(isEmailModalVisibleAtom) || store.get(isProjectModalVisibleAtom))
+            return; // freeze player when modal is open
 
         player.direction = k.vec2(0, 0);
         const worldMousePos = k.toWorld(k.mousePos()); // important to get world position on canvas

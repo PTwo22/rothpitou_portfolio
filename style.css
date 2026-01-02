@@ -1,0 +1,60 @@
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+@font-face {
+    /* source: https://cartr.gitlab.io/undertale-fonts/ */
+    font-family: "Determination Mono";
+    /* src: url("./assets/fonts/DeterminationMonoWeb.ttf") format("truetype"); */
+    src: url("/fonts/DeterminationMonoWeb.ttf") format("truetype");
+}
+
+:root{
+    font-family: "Determination Mono";
+    font-size: 1em;
+    --colour1: #000000;
+    --colour2: #FFFFFF;
+}
+
+body,
+html{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colour2);
+}
+.controls-message {
+    position: fixed;
+    color: var(--color1);
+    top: 3vh;
+    left: 5vw;
+    opacity: 0.4;
+    font-size: 1.5em;
+    max-width: 40vw;
+    user-select: none;
+}
+.camera-controller {
+    display: flex;
+    position: fixed;
+    top: 5vh;
+    right: 5vw;
+    z-index: 1;
+    gap: 1vh;
+}
+  
+.camera-controller-btn {
+    color: var(--color2);
+    background-color: var(--color1);
+    border: var(--color1);
+    border-style: solid;
+    border-radius: 12px;
+    font-size: 2rem;
+    width: 12vw;
+    opacity: 0.4;
+}
+  
