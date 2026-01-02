@@ -1,5 +1,6 @@
 // where we call kaplay functions
 import { PALETTE } from "./constants";
+import makePlayer from "./entities/Player";
 import makeKaplayCtx from "./kaplayCtx";
 
 // ! can't use default async for some reason - will investigate later (maybe)
@@ -43,6 +44,14 @@ export async function initGame(){ // async because we'll load json files
     k.loadSprite("water-tile-2", "./tiles/024.png", { wrap: "repeat" });
     // k.loadShaderURL("tiledPattern", null, "./shaders/tiledPattern.frag");
 
+    if (k.width() < 1000) {
+        k.camScale(k.vec2(0.5));
+        return;
+    }else{
+        k.camScale(k.vec2(0.8));
+    }
+
+
     // const tiledBackground = k.add([
     //     k.uvquad(k.width(), k.height()),
     //     k.shader("tiledPattern", () => ({
@@ -79,6 +88,8 @@ export async function initGame(){ // async because we'll load json files
         tiledBackground.height = k.height();
         tiledBackground.uniform.u_aspect = k.width() / k.height();
     });
+
+    makePlayer(k, k.vec2(k.center()), 700);
 
     // tiltedBackground.onUpdate(() =>{
         
