@@ -1,4 +1,5 @@
 // where we call kaplay functions
+import makeSection from "./components/Section";
 import { PALETTE } from "./constants";
 import makePlayer from "./entities/Player";
 import makeKaplayCtx from "./kaplayCtx";
@@ -8,6 +9,7 @@ import { cameraZoomValueAtom, store } from "./store";
 export async function initGame(){ // async because we'll load json files
     const k = makeKaplayCtx(); // global kaplay context
     // * loadSprite is a kaplay function to load an image as a sprite
+    // TODO remake oc spritesheet - 32x32 for higher res
     k.loadSprite("player", "./sprites/grian-sprite-sheet.png", {
         sliceX: 2,
         sliceY: 4,
@@ -97,6 +99,18 @@ export async function initGame(){ // async because we'll load json files
         tiledBackground.uniform.u_aspect = k.width() / k.height();
     });
 
+    makeSection(k, k.vec2(k.center().x, k.center().y - 400), "About", (parent) => {
+        
+    });
+    makeSection(k, k.vec2(k.center().x - 400, k.center().y), "Skills", (parent) => {
+        
+    });
+    makeSection(k, k.vec2(k.center().x, k.center().y + 400), "Experience", (parent) => {
+        
+    });
+    makeSection(k, k.vec2(k.center().x + 400, k.center().y), "Projects", (parent) => {
+        
+    });
     makePlayer(k, k.vec2(k.center()), 700);
 
     // tiltedBackground.onUpdate(() =>{
