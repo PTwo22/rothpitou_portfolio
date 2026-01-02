@@ -9,8 +9,8 @@ import { cameraZoomValueAtom, store } from "./store";
 export async function initGame(){ // async because we'll load json files
     const k = makeKaplayCtx(); // global kaplay context
     // * loadSprite is a kaplay function to load an image as a sprite
-    // TODO remake oc spritesheet - 32x32 for higher res
-    k.loadSprite("player", "./sprites/grian-sprite-sheet.png", {
+    // k.loadSprite("player", "./sprites/grian-sprite-sheet.png", {
+    k.loadSprite("player", "./sprites/my-sprite-sheet.png", {
         sliceX: 2,
         sliceY: 4,
         anims: {
@@ -31,7 +31,8 @@ export async function initGame(){ // async because we'll load json files
             "walk-left-up": { from: 2, to: 3, loop: true},
             "walk-right-up-idle": 4,
             "walk-right-up": { from: 4, to: 5, loop: true},
-        }  
+        },
+        
     });
     k.loadFont("Determination Mono", "./fonts/DeterminationMonoWeb.ttf");
     // TODO create/source logos and replace loads
@@ -99,6 +100,7 @@ export async function initGame(){ // async because we'll load json files
         tiledBackground.uniform.u_aspect = k.width() / k.height();
     });
 
+    // all sections to interactive/collide with
     makeSection(k, k.vec2(k.center().x, k.center().y - 400), "About", (parent) => {
         
     });

@@ -7,5 +7,5 @@ export default function ReactUI(){
             <CameraController />
             {/* TODO: bring UI components here */}
         </>
-    )
+    );
 }

@@ -117,14 +117,13 @@ export default function makePlayer(k, posVec2, speed){
 
         // done to not update to idle every cycle
         if(player.getCurAnim().name !== player.directionName){
-            player.play(player.directionName);
+            player.play(player.directionName, { speed : 3 });
         }
 
         if(player.direction.x && player.direction.y){ // diagonal movement speed fix
             player.move(player.direction.scale(DIAGONAL_FACTOR * speed));
             return;
         }
-
         player.move(player.direction.scale(speed));
 
     });
