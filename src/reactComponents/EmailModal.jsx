@@ -5,7 +5,7 @@ import { useState } from 'react';
 export default function EmailModal(){
 
     const [isVisible, setIsVisible] = useAtom(isEmailModalVisibleAtom);
-    const email = useAtom(emailAtom);
+    const email = useAtomValue(emailAtom);
 
     const [onCopyMessage, setOnCopyMessage] = useState("");
     // TODO make it so that you can send email from here (probably by using EmailJS)
@@ -45,5 +45,4 @@ export default function EmailModal(){
             </div>
         )
     );
-
 }
