@@ -17,8 +17,8 @@
     font-size: 1em;
     --colour1: #000000;
     --colour2: #FFFFFF;
+    --colour3: #53D1DF;
 }
-
 body,
 html{
     height: 100vh;
@@ -30,7 +30,7 @@ html{
 }
 .controls-message {
     position: fixed;
-    color: var(--color1);
+    color: var(--colour1);
     top: 3vh;
     left: 5vw;
     opacity: 0.4;
@@ -77,8 +77,8 @@ html{
     backdrop-filter: blur(2px);
 }
 .modal-content {
-    background-color: var(--color2);
-    border-color: var(--color1);
+    background-color: var(--colour3);
+    border-color: var(--colour1);
     border-style: solid;
     margin: 15% auto;
     border-radius: 5px;
@@ -96,9 +96,9 @@ html{
     margin-top: 1vh;
     min-height: 5vh;
     max-height: 10vh;
-    background-color: var(--color1);
-    border-color: var(--color2);
+    background-color: var(--colour1);
+    border-color: var(--colour2);
     border-radius: 5px;
-    color: var(--color2);
+    color: var(--colour2);
     border: none;
 }

@@ -1,10 +1,10 @@
-import { useAtom } from 'jotai';
-import { emailModalVisibleAtom, emailAtom } from '../store';
+import { useAtom, useAtomValue } from 'jotai';
+import { isEmailModalVisibleAtom, emailAtom } from '../store';
 import { useState } from 'react';
 
 export default function EmailModal(){
 
-    const [isVisible, setIsVisible] = useAtom(emailModalVisibleAtom);
+    const [isVisible, setIsVisible] = useAtom(isEmailModalVisibleAtom);
     const email = useAtom(emailAtom);
 
     const [onCopyMessage, setOnCopyMessage] = useState("");

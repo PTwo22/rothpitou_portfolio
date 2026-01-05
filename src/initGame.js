@@ -1,12 +1,19 @@
 // where we call kaplay functions
+import makeEmailIcon from "./components/EmailIcon";
 import makeSection from "./components/Section";
+import makeSocialIcon from "./components/SocialIcon";
 import { PALETTE } from "./constants";
 import makePlayer from "./entities/Player";
 import makeKaplayCtx from "./kaplayCtx";
 import { cameraZoomValueAtom, store } from "./store";
+import { makeAppear } from "./utils";
 
 // ! can't use default async for some reason - will investigate later (maybe)
 export async function initGame(){ // async because we'll load json files
+
+    const generalData = await(await fetch("./configs/generalData.json")).json();
+    const socialsData = await(await fetch("./configs/socialsData.json")).json();
+
     const k = makeKaplayCtx(); // global kaplay context
     // * loadSprite is a kaplay function to load an image as a sprite
     // k.loadSprite("player", "./sprites/grian-sprite-sheet.png", {
@@ -37,10 +44,11 @@ export async function initGame(){ // async because we'll load json files
     k.loadFont("Determination Mono", "./fonts/DeterminationMonoWeb.ttf");
     // TODO create/source logos and replace loads
     // ! add more if applicable
-    k.loadSprite("github-logo", "./logos/sample.webp");
-    k.loadSprite("linkedin-logo", "./logos/sample.webp");
-    k.loadSprite("instagram-logo", "./logos/sample.webp");
-    k.loadSprite("linktree-logo", "./logos/sample.webp");
+    k.loadSprite("github-logo", "./logos/linkedin-logo.png");
+    k.loadSprite("linkedin-logo", "./logos/linkedin-logo.png");
+    k.loadSprite("instagram-logo", "./logos/linkedin-logo.png");
+    k.loadSprite("linktree-logo", "./logos/linkedin-logo.png");
+    k.loadSprite("email-logo", "./logos/linkedin-logo.png");
    
     // TODO have water as the shader and overlay it with a tilemap/just map - add conlisions too
     // Load your 16x16 tiles
@@ -61,7 +69,6 @@ export async function initGame(){ // async because we'll load json files
         if(camZoomValue !== k.camScale())
             k.camScale(k.vec2(camZoomValue));
     });
-
 
     // const tiledBackground = k.add([
     //     k.uvquad(k.width(), k.height()),
@@ -101,8 +108,48 @@ export async function initGame(){ // async because we'll load json files
     });
 
     // all sections to interactive/collide with
-    makeSection(k, k.vec2(k.center().x, k.center().y - 400), "About", (parent) => {
-        
+    // About section
+    makeSection(k, k.vec2(k.center().x, k.center().y - 400), generalData.section1Name , (parent) => {
+        const container = parent.add([k.pos(-805, -700), k.opacity(0)]);
+        container.add([
+            k.text(generalData.header.title, { font: "Determination Mono", size: 88 }),
+            k.color(k.Color.fromHex(PALETTE.colour3)),
+            k.pos(395, 0),
+            k.opacity(0),
+            k.area(),
+        ]);
+
+        container.add([
+            k.text(generalData.header.subtitle, { font: "Determination Mono", size: 48 }),
+            k.color(k.Color.fromHex(PALETTE.colour3)),
+            k.pos(395, 100), // TODO adjust to center
+            k.opacity(0),
+            k.area(),
+        ]);
+
+        const socialContainer = container.add([k.pos(130, 0), k.opacity(0)]);
+
+        for(const socialData of socialsData){
+            // console.log(socialData);
+            if(socialData.name === "Email"){
+                makeEmailIcon(k, socialContainer, k.vec2(socialData.pos.x, socialData.pos.y), socialData.imageData, socialData.name, socialData.address);
+                continue;
+            }
+            makeSocialIcon(
+                k,
+                socialContainer,
+                k.vec2(socialData.pos.x, socialData.pos.y),
+                socialData.imageData,
+                socialData.name,
+                socialData.link,
+                socialData.description
+            );
+        }
+        makeAppear(k, container);
+        makeAppear(k, socialContainer);
+
+
+
     });
     makeSection(k, k.vec2(k.center().x - 400, k.center().y), "Skills", (parent) => {
         

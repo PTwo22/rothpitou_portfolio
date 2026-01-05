@@ -6,7 +6,7 @@ import { atom, createStore } from "jotai";
 
 // TODO adjust accordingly
 export const isSocialModalVisibleAtom = atom(false);
-export const selectLinkAtom = atom(null);
+export const selectedLinkAtom = atom(null);
 export const selectedLinkDescriptionAtom = atom("");
 
 export const isEmailModalVisibleAtom = atom(false);
