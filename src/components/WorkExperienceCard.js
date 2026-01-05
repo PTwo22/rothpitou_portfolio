@@ -1,0 +1,47 @@
+import { PALETTE } from "../constants";
+import { opacityTrickleDown } from "../utils";
+
+export default function makeWorkExperienceCard(k, parent, posVec2, height, roleData){
+
+    const card = parent.add([
+        k.rect(800, height, { radius: 8 }),
+        k.area(),
+        k.outline(4, k.Color.fromHex(PALETTE.colour3)),
+        k.pos(posVec2),
+        k.color(k.Color.fromHex(PALETTE.colour2)),
+        k.opacity(0),
+        k.offscreen({ hide: true, distance: 300 }),
+    ]);
+
+    // child of card
+    const title = card.add([
+        k.text(roleData.title, { font: "Determination Mono", size: 32 }),
+        k.color(k.Color.fromHex(PALETTE.colour3)),
+        k.pos(20, 20),
+        k.opacity(0),
+    ]);
+
+    const history = card.add([
+        k.text(
+        `${roleData.company.name} -- ${roleData.company.startDate}-${roleData.company.endDate}`,
+        {
+            font: "Determination Mono",
+            size: 20,
+        }
+        ),
+        k.color(k.Color.fromHex(PALETTE.colour3)),
+        k.pos(20, 60),
+        k.opacity(0),
+    ]);
+
+    const description = card.add([
+        k.text(roleData.description, { font: "Determination Mono", size: 25, width: 750 }),
+        k.color(k.Color.fromHex(PALETTE.colour3)),
+        k.pos(20, 110),
+        k.opacity(0),
+    ]);
+
+    opacityTrickleDown(parent, [title, history, description]);
+
+    return card;
+}

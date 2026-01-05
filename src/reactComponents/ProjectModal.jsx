@@ -13,17 +13,16 @@ export default function ProjectModal(){
                     <h1>{projectData.title}</h1>
                     <div className="modal-btn-container">
                         {projectData.links.map((linkData) => (
-                            <button key={linkData.id} className={"model-btn"} onClick={() => {
+                            <button key={linkData.id} className={"modal-btn"} onClick={() => {
                                 window.open(linkData.link, "_blank");
                             }}>
                                 {linkData.name}
                             </button>
                         ))}
-                        <button>
-                            className={"modal-btn"} onClick={() => {
-                                setIsVisible(false);
-                            }}
-                                Close
+                        <button className={"modal-btn"} onClick={() => {
+                            setIsVisible(false);
+                        }}>
+                            Close
                         </button>
                     </div>
                 </div>

@@ -17,9 +17,13 @@ export default function makeSkillIcon(k, parent, posVec2, imageData, subtitle){
         k.area({shape: new k.Rect(k.vec2(0), skillIcon.width + 50, skillIcon.height + 65)})
     );
 
-    skillIcon.use(k.body());
+    skillIcon.use(k.body({
+        drag: 3,
+        friction: 0.5,
+    }));
     skillIcon.onCollide("player", (player) => {
         skillIcon.applyImpulse(player.direction.scale(1000)); // push icon away from player
+        
     });
 
     opacityTrickleDown(parent, [subtitleText]); // make subtitle and circle appear

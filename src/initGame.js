@@ -2,6 +2,9 @@
 import makeEmailIcon from "./components/EmailIcon";
 import makeSection from "./components/Section";
 import makeSocialIcon from "./components/SocialIcon";
+import makeSkillIcon from "./components/SkillIcon";
+import makeWorkExperienceCard from "./components/WorkExperienceCard";
+import makeProjectCard from "./components/ProjectCard";
 import { PALETTE } from "./constants";
 import makePlayer from "./entities/Player";
 import makeKaplayCtx from "./kaplayCtx";
@@ -13,6 +16,9 @@ export async function initGame(){ // async because we'll load json files
 
     const generalData = await(await fetch("./configs/generalData.json")).json();
     const socialsData = await(await fetch("./configs/socialsData.json")).json();
+    const skillsData = await(await fetch("./configs/skillsData.json")).json();
+    const experiencesData = await(await fetch("./configs/experiencesData.json")).json();
+    const projectsData = await(await fetch("./configs/projectsData.json")).json();
 
     const k = makeKaplayCtx(); // global kaplay context
     // * loadSprite is a kaplay function to load an image as a sprite
@@ -49,6 +55,21 @@ export async function initGame(){ // async because we'll load json files
     k.loadSprite("instagram-logo", "./logos/linkedin-logo.png");
     k.loadSprite("linktree-logo", "./logos/linkedin-logo.png");
     k.loadSprite("email-logo", "./logos/linkedin-logo.png");
+
+    k.loadSprite("sample", "./logos/sample.png");
+
+    k.loadSprite("javascript-logo", "./logos/js-logo.png");
+    k.loadSprite("typescript-logo", "./logos/ts-logo.png");
+    k.loadSprite("react-logo", "./logos/react-logo.png");
+    k.loadSprite("nextjs-logo", "./logos/nextjs-logo.png");
+    k.loadSprite("postgres-logo", "./logos/postgres-logo.png");
+    k.loadSprite("html-logo", "./logos/html-logo.png");
+    k.loadSprite("css-logo", "./logos/css-logo.png");
+    k.loadSprite("tailwind-logo", "./logos/tailwind-logo.png");
+    k.loadSprite("python-logo", "./logos/python-logo.png");
+    // k.loadSprite("sonic-js", "./projects/sonic-js.png");
+    // k.loadSprite("kirby-ts", "./projects/kirby-ts.png");
+    // k.loadSprite("platformer-js", "./projects/platformer-js.png");
    
     // TODO have water as the shader and overlay it with a tilemap/just map - add conlisions too
     // Load your 16x16 tiles
@@ -108,7 +129,8 @@ export async function initGame(){ // async because we'll load json files
     });
 
     // all sections to interactive/collide with
-    // About section
+
+    // * About section
     makeSection(k, k.vec2(k.center().x, k.center().y - 400), generalData.section1Name , (parent) => {
         const container = parent.add([k.pos(-805, -700), k.opacity(0)]);
         container.add([
@@ -148,17 +170,57 @@ export async function initGame(){ // async because we'll load json files
         makeAppear(k, container);
         makeAppear(k, socialContainer);
 
+    });
 
+    // * Skills section
+    makeSection(k, k.vec2(k.center().x - 400, k.center().y), generalData.section2Name, (parent) => {
 
+        const container = parent.add([k.opacity(0), k.pos(-300, 0)]);
+
+        for(const skillData of skillsData){
+            makeSkillIcon(
+                k, 
+                container, 
+                k.vec2(skillData.pos.x, skillData.pos.y), 
+                skillData.logoData, 
+                skillData.name
+            );
+        }
+        makeAppear(k, container);
     });
-    makeSection(k, k.vec2(k.center().x - 400, k.center().y), "Skills", (parent) => {
+
+    // * Experience section
+    makeSection(k, k.vec2(k.center().x + 400, k.center().y), generalData.section3Name, (parent) => {
         
+        const container = parent.add([k.opacity(0), k.pos(0)]);
+
+        for(const experienceData of experiencesData){
+            makeWorkExperienceCard(
+                k, 
+                container, 
+                k.vec2(experienceData.pos.x, experienceData.pos.y), 
+                experienceData.cardHeight, 
+                experienceData.roleData
+            );
+        }
+        makeAppear(k, container);
     });
-    makeSection(k, k.vec2(k.center().x, k.center().y + 400), "Experience", (parent) => {
+
+    // * Projects section
+    makeSection(k, k.vec2(k.center().x, k.center().y + 400), generalData.section4Name, (parent) => {
         
-    });
-    makeSection(k, k.vec2(k.center().x + 400, k.center().y), "Projects", (parent) => {
-        
+        const container = parent.add([k.opacity(0), k.pos(0)]);
+
+        for(const projectData of projectsData){
+            makeProjectCard(
+                k,
+                container,
+                k.vec2(projectData.pos.x, projectData.pos.y),
+                projectData.data,
+                projectData.thumbnail,
+            );
+        }
+        makeAppear(k, container);
     });
     makePlayer(k, k.vec2(k.center()), 700);
 

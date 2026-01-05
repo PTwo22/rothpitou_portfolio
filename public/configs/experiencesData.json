@@ -1,0 +1,41 @@
+[
+    {
+        "pos": { "x": 150, "y": -100 },
+        "cardHeight": 250,
+        "roleData": {
+            "title": "Vehicle Control Team Member",
+            "description": "placeholder",
+            "company": {
+                "name": "Swinburne Formula SAE",
+                "startDate": "2025",
+                "endDate": "Present"
+            }
+        }
+    },
+        {
+        "pos": { "x": 150, "y": 180 },
+        "cardHeight": 250,
+        "roleData": {
+            "title": "Creative Director",
+            "description": "placeholder",
+            "company": {
+                "name": "Swinburne Cambodian Student Association (SCSA)",
+                "startDate": "July 2025",
+                "endDate": "November 2025"
+            }
+        }
+    },
+    {
+        "pos": { "x": 150, "y": 460 },
+        "cardHeight": 250,
+        "roleData": {
+            "title": "Creative Officer",
+            "description": "placeholder",
+            "company": {
+                "name": "Swinburne Cambodian Student Association (SCSA)",
+                "startDate": "March 2025",
+                "endDate": "July 2025"
+            }
+        }
+    }
+]
