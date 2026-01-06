@@ -142,7 +142,7 @@ export default function makePlayer(k, posVec2, speed){
             player.directionName = "walk-down";
 
         // console.log(player.directionName);
-        console.log(player.direction.x, player.direction.y);
+        // console.log(player.direction.x, player.direction.y);
     
 
         // done to not update to idle every cycle

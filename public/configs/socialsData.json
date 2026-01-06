@@ -1,6 +1,6 @@
 [
     {
-        "pos": { "x": 400, "y": 250 },
+        "pos": { "x": 382, "y": 250 },
         "name": "GitHub",
         "description": "GitHub is where I host my projects.",
         "link": "https://github.com/PTwo22",
@@ -11,7 +11,7 @@
         }
     },
     {
-        "pos": { "x": 600, "y": 250 },
+        "pos": { "x": 582, "y": 250 },
         "name": "LinkedIn",
         "description": "Connect with me on LinkedIn!",
         "link": "https://www.linkedin.com/in/rothpitoupoeung",
@@ -22,7 +22,7 @@
         }
     },
     {
-        "pos": { "x": 800, "y": 250 },
+        "pos": { "x": 782, "y": 250 },
         "name": "Instagram",
         "description": "[test]",
         "link": "https://www.instagram.com/ptwoo22/",
@@ -33,7 +33,7 @@
         }
     },
     {
-        "pos": { "x": 1000, "y": 250 },
+        "pos": { "x": 982, "y": 250 },
         "name": "Email",
         "address": "rothpitoupoeung@gmail.com",
         "imageData": {

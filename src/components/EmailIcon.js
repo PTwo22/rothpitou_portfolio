@@ -14,7 +14,7 @@ export default function makeEmailIcon(k, parent, posVec2, imageData, subtitle, e
         k.color(k.Color.fromHex(PALETTE.colour3)),
         k.anchor("center"),
         k.area(),
-        k.pos(0, 150),
+        k.pos(0, 170),
         k.opacity(0),
     ]);
 

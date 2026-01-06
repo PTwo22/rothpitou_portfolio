@@ -19,7 +19,7 @@ export default function makeSocialIcon(k, parent, posVec2, imageData, subtitle, 
         k.color(k.Color.fromHex(PALETTE.colour3)),
         k.anchor("center"),
         k.area(),
-        k.pos(0, 150),
+        k.pos(0, 170),
         k.opacity(0),
     ]);
 

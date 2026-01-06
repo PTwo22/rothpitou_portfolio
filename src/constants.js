@@ -1,7 +1,7 @@
 export const PALETTE = {
     // TODO finalise colour palette
-    colour1: '#228B22', // forest green
-    colour2: '#32CD32', // lime green
+    colour1: '#8DBBCC', // forest green
+    colour2: '#AFDAE0', // lime green
 
     // colour1: "#000000", // black
     // colour2: '#FFFFFF', // white

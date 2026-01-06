@@ -132,18 +132,26 @@ export async function initGame(){ // async because we'll load json files
     // * About section
     makeSection(k, k.vec2(k.center().x, k.center().y - 400), generalData.section1Name , (parent) => {
         const container = parent.add([k.pos(-805, -700), k.opacity(0)]);
-        container.add([
+        container.add([ // title (my name)
             k.text(generalData.header.title, { font: "Determination Mono", size: 88 }),
-            k.color(k.Color.fromHex(PALETTE.colour3)),
-            k.pos(395, 0),
+            k.color(k.Color.fromHex(PALETTE.colour4)),
+            k.pos(400, -100),
             k.opacity(0),
             k.area(),
         ]);
 
-        container.add([
+        container.add([ // title (my name) - backdrop
+            k.text(generalData.header.title, { font: "Determination Mono", size: 88 }),
+            k.color(k.Color.fromHex(PALETTE.colour3)),
+            k.pos(396, -104),
+            k.opacity(0),
+            k.area(),
+        ]);
+
+        container.add([ // subtitle - will need to adjust manually based on text length changes
             k.text(generalData.header.subtitle, { font: "Determination Mono", size: 48 }),
             k.color(k.Color.fromHex(PALETTE.colour3)),
-            k.pos(395, 100), // TODO adjust to center
+            k.pos(150, 0),
             k.opacity(0),
             k.area(),
         ]);
