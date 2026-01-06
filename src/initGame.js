@@ -50,14 +50,13 @@ export async function initGame(){ // async because we'll load json files
     k.loadFont("Determination Mono", "./fonts/DeterminationMonoWeb.ttf");
     // TODO create/source logos and replace loads
     // ! add more if applicable
-    k.loadSprite("github-logo", "./logos/linkedin-logo.png");
+    k.loadSprite("github-logo", "./logos/github-logo.png");
     k.loadSprite("linkedin-logo", "./logos/linkedin-logo.png");
-    k.loadSprite("instagram-logo", "./logos/linkedin-logo.png");
+    k.loadSprite("instagram-logo", "./logos/instagram-logo.png");
     k.loadSprite("linktree-logo", "./logos/linkedin-logo.png");
-    k.loadSprite("email-logo", "./logos/linkedin-logo.png");
+    k.loadSprite("email-logo", "./logos/email-logo.png");
 
     k.loadSprite("sample", "./logos/sample.png");
-
     k.loadSprite("javascript-logo", "./logos/js-logo.png");
     k.loadSprite("typescript-logo", "./logos/ts-logo.png");
     k.loadSprite("react-logo", "./logos/react-logo.png");

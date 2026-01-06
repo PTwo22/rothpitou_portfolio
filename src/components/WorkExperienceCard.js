@@ -8,7 +8,7 @@ export default function makeWorkExperienceCard(k, parent, posVec2, height, roleD
         k.area(),
         k.outline(4, k.Color.fromHex(PALETTE.colour3)),
         k.pos(posVec2),
-        k.color(k.Color.fromHex(PALETTE.colour2)),
+        k.color(k.Color.fromHex(PALETTE.colour4)),
         k.opacity(0),
         k.offscreen({ hide: true, distance: 300 }),
     ]);
