@@ -66,54 +66,84 @@ export default function makePlayer(k, posVec2, speed){
         }
 
         // TODO make so that it changes at 45 degree angles instead
-        if (
+        // if (
+        //     player.direction.x > 0 &&
+        //     player.direction.y > -0.5 &&
+        //     player.direction.y < 0.5
+        // )
+        //     player.directionName = "walk-right";
+        
+        // if (
+        //     player.direction.x < 0 &&
+        //     player.direction.y > -0.5 &&
+        //     player.direction.y < 0.5
+        // )
+        //     player.directionName = "walk-left";
+    
+        // if (player.direction.x < 0 && player.direction.y < -0.8)
+        //     player.directionName = "walk-up";
+    
+        // if (player.direction.x < 0 && player.direction.y > 0.8)
+        //     player.directionName = "walk-down";
+
+        // if (
+        //     player.direction.x < 0 &&
+        //     player.direction.y > -0.8 &&
+        //     player.direction.y < -0.5
+        // )
+        //     player.directionName = "walk-left-up";
+      
+        // if (
+        //     player.direction.x < 0 &&
+        //     player.direction.y > 0.5 &&
+        //     player.direction.y < 0.8
+        // )
+        //     player.directionName = "walk-left-down";
+    
+        // if (
+        //     player.direction.x > 0 &&
+        //     player.direction.y < -0.5 &&
+        //     player.direction.y > -0.8
+        // )
+        //     player.directionName = "walk-right-up";
+    
+        // if (
+        //     player.direction.x > 0 &&
+        //     player.direction.y > 0.5 &&
+        //     player.direction.y < 0.8
+        // )
+        //     player.directionName = "walk-right-down";
+
+
+        if ( // sin45 = 0.7071
             player.direction.x > 0 &&
-            player.direction.y > -0.5 &&
-            player.direction.y < 0.5
+            player.direction.y > -0.7071 &&
+            player.direction.y < 0.7071
         )
             player.directionName = "walk-right";
-      
+        
         if (
             player.direction.x < 0 &&
-            player.direction.y > -0.5 &&
-            player.direction.y < 0.5
+            player.direction.y > -0.7071 &&
+            player.direction.y < 0.7071
         )
             player.directionName = "walk-left";
     
-        if (player.direction.x < 0 && player.direction.y < -0.8)
+        if (player.direction.x < 0.7071 &&
+            player.direction.x > -0.7071 &&
+            player.direction.y < 0
+        )
             player.directionName = "walk-up";
     
-        if (player.direction.x < 0 && player.direction.y > 0.8)
+        if (player.direction.x < 0.7071 && 
+            player.direction.x > -0.7071 &&
+            player.direction.y > 0
+        )
             player.directionName = "walk-down";
 
-        if (
-            player.direction.x < 0 &&
-            player.direction.y > -0.8 &&
-            player.direction.y < -0.5
-        )
-            player.directionName = "walk-left-up";
-      
-        if (
-            player.direction.x < 0 &&
-            player.direction.y > 0.5 &&
-            player.direction.y < 0.8
-        )
-            player.directionName = "walk-left-down";
+        // console.log(player.directionName);
+        console.log(player.direction.x, player.direction.y);
     
-        if (
-            player.direction.x > 0 &&
-            player.direction.y < -0.5 &&
-            player.direction.y > -0.8
-        )
-            player.directionName = "walk-right-up";
-    
-        if (
-            player.direction.x > 0 &&
-            player.direction.y > 0.5 &&
-            player.direction.y < 0.8
-        )
-            player.directionName = "walk-right-down";
-      
 
         // done to not update to idle every cycle
         if(player.getCurAnim().name !== player.directionName){
