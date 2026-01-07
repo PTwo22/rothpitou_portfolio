@@ -56,7 +56,7 @@ export async function initGame(){ // async because we'll load json files
     k.loadSprite("linktree-logo", "./logos/linkedin-logo.png");
     k.loadSprite("email-logo", "./logos/email-logo.png");
 
-    k.loadSprite("sample", "./logos/sample.png");
+    k.loadSprite("portfolio-site-project", "./logos/portfolio-site-project.png");
     k.loadSprite("javascript-logo", "./logos/js-logo.png");
     k.loadSprite("typescript-logo", "./logos/ts-logo.png");
     k.loadSprite("react-logo", "./logos/react-logo.png");
