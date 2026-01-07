@@ -23,7 +23,7 @@ export default function makeWorkExperienceCard(k, parent, posVec2, height, roleD
 
     const history = card.add([
         k.text(
-        `${roleData.company.name} -- ${roleData.company.startDate}-${roleData.company.endDate}`,
+        `${roleData.company.name} - ${roleData.company.startDate}-${roleData.company.endDate}`,
         {
             font: "Determination Mono",
             size: 20,

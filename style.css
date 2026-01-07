@@ -21,6 +21,7 @@
     --colour4: #B0B0B0;
     --colour5: #A0A0A0;
     --colour6: #ffd700;
+    --colour7: #cfaf04;
 }
 body,
 html{
@@ -162,8 +163,8 @@ html{
 .contact-form input[type="submit"] {
     font-family: "Determination Mono";
     width: 100%;
-    background-color: var(--colour1);
-    color: var(--colour2);
+    background-color: var(--colour6);
+    color: var(--colour1);
     padding: 14px;
     border: none;
     border-radius: 6px;
@@ -174,7 +175,7 @@ html{
 }
 
 .contact-form input[type="submit"]:hover {
-    background-color: var(--colour6);
+    background-color: var(--colour7);
     color: var(--colour1);
 }
 

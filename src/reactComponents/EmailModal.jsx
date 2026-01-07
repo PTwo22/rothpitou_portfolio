@@ -59,7 +59,7 @@ export default function EmailModal(){
                             <h1>Contact Me</h1>
 
                             <label>Name</label>
-                            <input type="text" name="user_name" required placeholder="Your Name"/>
+                            <input type="text" name="user_name" required placeholder="e.g. Kimi No Nawa"/>
 
                             <label>Email</label>
                             <input type="email" name="user_email" required placeholder="Your Email"/>
