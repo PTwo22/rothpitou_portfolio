@@ -4,7 +4,8 @@
 
 import { atom, createStore } from "jotai";
 
-// TODO adjust accordingly
+export const gameStartedAtom = atom(false); // true when click begin button
+
 export const isSocialModalVisibleAtom = atom(false);
 export const selectedLinkAtom = atom(null);
 export const selectedLinkDescriptionAtom = atom("");

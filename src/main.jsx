@@ -4,8 +4,21 @@ import { createRoot } from 'react-dom/client';
 // import App from './App.jsx'
 import ReactUI from './ReactUI';
 import { initGame } from './initGame';
-import { Provider } from 'jotai';
-import { store } from './store';
+import { Provider, useAtomValue } from 'jotai';
+import { gameStartedAtom, store } from './store';
+import StartPage from './pages/StartPage';
+
+// function App(){
+//   const isStarted = useAtomValue(gameStartedAtom);
+  
+//   useEffect(() => {
+//     if(isStarted){
+//       initGame();
+//     }
+//   }, [isStarted]);
+
+//   return isStarted ? <ReactUI /> : <StartPage />;
+// }
 
 const ui = document.getElementById('ui');
 const root = createRoot(ui);

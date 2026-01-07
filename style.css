@@ -18,6 +18,9 @@
     --colour1: #000000;
     --colour2: #FFFFFF;
     --colour3: #BEBEBE;
+    --colour4: #B0B0B0;
+    --colour5: #A0A0A0;
+    --colour6: #ffd700;
 }
 body,
 html{
@@ -101,4 +104,85 @@ html{
     border-radius: 5px;
     color: var(--colour2);
     border: none;
+}
+
+/* * email form section */
+.contact-form-wrapper {
+    background-color: var(--colour4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 50vh; */
+    padding: 0.5vh;
+}
+.contact-form{
+    padding: 2vh;
+}
+.contact-form h1 {
+    text-align: center;
+    text-shadow: 5px 5px var(--colour5);
+}
+.contact-form label {
+    font-weight: bold;
+    font-size: 2vh;
+    /* padding-bottom: 5vh;
+    padding-top: 5vh; */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="subject"],
+.contact-form textarea {
+    width: 100%;
+    padding: 1vh;
+    border: 2px solid var(--colour1);
+    font-family: "Determination Mono";
+    font-size: 2vh;
+    margin-top: 0.5%;
+    margin-bottom: 1.2vh;
+}
+
+/* focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--colour6); /* albitrary focus color - match Undertale's save point */
+    /* box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1); */
+}
+
+/* textarea specific */
+.contact-form textarea {
+    resize: vertical; /* allows user to resize height only */
+    min-height: 10vh;
+    max-height: 20vh;
+    /* margin-bottom: 1vh; */
+}
+
+/* submit Button */
+.contact-form input[type="submit"] {
+    font-family: "Determination Mono";
+    width: 100%;
+    background-color: var(--colour1);
+    color: var(--colour2);
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: var(--colour6);
+    color: var(--colour1);
+}
+
+.contact-form input[type="submit"]:active {
+    transform: scale(0.98);
+}
+.contact-form p{
+    text-align: center;
+    margin-top: 0.5vh;
+    margin-bottom: 0;
 }

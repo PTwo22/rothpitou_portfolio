@@ -1,23 +1,26 @@
 // first page user sees
 import React, { useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import { useSetAtom } from 'jotai';
+import clickSound from '/sounds/undertale-ding.mp3';
+import { gameStartedAtom } from '../store';
 
-// import clickSound from '../assets/sounds/undertale-ding.mp3';
-import clickSound from '/public/sounds/undertale-ding.mp3';
 
-
-function StartPage(){
+export default function StartPage(){
     /* TODO
     - add interactivity to the button to go to next page
     - input animations in the background and a pixelated transition effect when going to the next page
     */
+    const setGameStarted = useSetAtom(gameStartedAtom);
     // navigate to home page function
-    const navigate = useNavigate();
-    const dingSound = new Audio(clickSound);
+    // const navigate = useNavigate();
+    
 
     const handleClick = () => {
+        const dingSound = new Audio(clickSound);
         dingSound.play();
-        navigate("/home");
+        setGameStarted(true);
+        // navigate("/home"); // to be changed
     };
 
     return (
@@ -30,4 +33,3 @@ function StartPage(){
         </div>
     );
 }
-export default StartPage;

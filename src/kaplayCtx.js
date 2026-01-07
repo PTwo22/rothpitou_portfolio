@@ -1,4 +1,4 @@
-// where all kaplay functions live
+
 import kaplay from "kaplay";
 
 export default function makeKaplayCtx(){
