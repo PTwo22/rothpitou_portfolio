@@ -7,7 +7,7 @@
             "description": "placeholder",
             "company": {
                 "name": "Swinburne Formula SAE",
-                "startDate": "2025",
+                "startDate": "September 2025",
                 "endDate": "Present"
             }
         }
@@ -35,6 +35,19 @@
                 "name": "Swinburne Cambodian Student Association (SCSA)",
                 "startDate": "March 2025",
                 "endDate": "July 2025"
+            }
+        }
+    },
+    {
+        "pos": { "x": 150, "y": 740 },
+        "cardHeight": 250,
+        "roleData": {
+            "title": "Volunteer & Peer Mentor",
+            "description": "placeholder",
+            "company": {
+                "name": "Swinburne University of Technology",
+                "startDate": "March 2025",
+                "endDate": "August 2025"
             }
         }
     }

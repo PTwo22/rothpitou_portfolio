@@ -17,5 +17,62 @@
                 }
             ]
         }
+    },
+    {
+        "pos": { "x": 0, "y": 840 },
+        "thumbnail": "portfolio-site-project",
+        "data": {
+            "title": "IoT Hazard Detection and Alert System",
+            "links": [
+                {
+                    "id": 0,
+                    "name": "More Info",
+                    "link": "https://www.linkedin.com/in/rothpitoupoeung/details/projects/"
+                },
+                {
+                    "id": 1,
+                    "name": "Source Code [REDACTED]",
+                    "link": ""
+                }
+            ]
+        }
+    },
+    {
+        "pos": { "x": 0, "y": 1330 },
+        "thumbnail": "portfolio-site-project",
+        "data": {
+            "title": "IoT Smart Traffic System",
+            "links": [
+                {
+                    "id": 0,
+                    "name": "Video Demo",
+                    "link": "https://www.youtube.com/watch?v=T15QXLhYbOw"
+                },
+                {
+                    "id": 1,
+                    "name": "More Info",
+                    "link": "https://www.linkedin.com/in/rothpitoupoeung/details/projects/"
+                }
+            ]
+        }
+    },
+    {
+        "pos": { "x": 0, "y": 1820 },
+        "thumbnail": "portfolio-site-project",
+        "data": {
+            "title": "2D RPG Game",
+            "links": [
+                {
+                    "id": 0,
+                    "name": "More Info",
+                    "link": "https://www.linkedin.com/in/rothpitoupoeung/details/projects/"
+                },
+                {
+                    "id": 1,
+                    "name": "Source Code",
+                    "link": "https://github.com/PTwo22/2D_Game"
+                }
+            ]
+        }
     }
 ]
