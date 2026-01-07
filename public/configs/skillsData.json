@@ -25,5 +25,23 @@
             "width": 148,
             "height": 128
         }
+    },
+    {
+        "pos": { "x": -200, "y": -200 },
+        "name": "HTML",
+        "logoData": {
+            "name": "html-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": -400, "y": -200 },
+        "name": "CSS",
+        "logoData": {
+            "name": "css-logo",
+            "width": 128,
+            "height": 128
+        }
     }
 ]

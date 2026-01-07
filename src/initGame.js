@@ -48,15 +48,22 @@ export async function initGame(){ // async because we'll load json files
         
     });
     k.loadFont("Determination Mono", "./fonts/DeterminationMonoWeb.ttf");
-    // TODO create/source logos and replace loads
+
     // ! add more if applicable
+    // * social logos
     k.loadSprite("github-logo", "./logos/github-logo.png");
     k.loadSprite("linkedin-logo", "./logos/linkedin-logo.png");
     k.loadSprite("instagram-logo", "./logos/instagram-logo.png");
     k.loadSprite("linktree-logo", "./logos/linkedin-logo.png");
     k.loadSprite("email-logo", "./logos/email-logo.png");
 
-    k.loadSprite("portfolio-site-project", "./logos/portfolio-site-project.png");
+    // * projects thumbnailss
+    k.loadSprite("portfolio-site-project", "./projects/portfolio-site-project.png");
+
+    // * skill logos
+    // TODO add and subtract - maybe add a button to list the skills too cuz I aint drawing all that
+    // TO ADD (Tech): Java, C++, Docker, AWS, Arduino, SQL, PyTorch, TensorFlow, Kaplay
+    // TO ADD (Skills): OOP, REST API, AI/ML, Game Dev, Web Dev, Computer Vision
     k.loadSprite("javascript-logo", "./logos/js-logo.png");
     k.loadSprite("typescript-logo", "./logos/ts-logo.png");
     k.loadSprite("react-logo", "./logos/react-logo.png");
@@ -66,9 +73,6 @@ export async function initGame(){ // async because we'll load json files
     k.loadSprite("css-logo", "./logos/css-logo.png");
     k.loadSprite("tailwind-logo", "./logos/tailwind-logo.png");
     k.loadSprite("python-logo", "./logos/python-logo.png");
-    // k.loadSprite("sonic-js", "./projects/sonic-js.png");
-    // k.loadSprite("kirby-ts", "./projects/kirby-ts.png");
-    // k.loadSprite("platformer-js", "./projects/platformer-js.png");
    
     // TODO have water as the shader and overlay it with a tilemap/just map - add conlisions too
     // Load your 16x16 tiles
