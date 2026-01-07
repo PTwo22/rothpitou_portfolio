@@ -160,6 +160,7 @@ export async function initGame(){ // async because we'll load json files
             k.area(),
         ]);
 
+        // * all social icons
         const socialContainer = container.add([k.pos(130, 0), k.opacity(0)]);
 
         for(const socialData of socialsData){

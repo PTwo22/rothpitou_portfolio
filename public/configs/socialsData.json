@@ -2,7 +2,7 @@
     {
         "pos": { "x": 382, "y": 250 },
         "name": "GitHub",
-        "description": "GitHub is where I host my projects.",
+        "description": "This is where I store my projects.",
         "link": "https://github.com/PTwo22",
         "imageData": {
             "name": "github-logo",
@@ -13,7 +13,7 @@
     {
         "pos": { "x": 582, "y": 250 },
         "name": "LinkedIn",
-        "description": "Connect with me on LinkedIn!",
+        "description": "Find out more and connect with me on LinkedIn!",
         "link": "https://www.linkedin.com/in/rothpitoupoeung",
         "imageData": {
             "name": "linkedin-logo",
@@ -24,7 +24,7 @@
     {
         "pos": { "x": 782, "y": 250 },
         "name": "Instagram",
-        "description": "[test]",
+        "description": "Where good or bad photos lives.",
         "link": "https://www.instagram.com/ptwoo22/",
         "imageData": {
             "name": "instagram-logo",

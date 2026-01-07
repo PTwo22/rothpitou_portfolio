@@ -69,7 +69,7 @@ export default function EmailModal(){
 
                             <label>Message</label>
                             <textarea name="message" rows="4" required placeholder="Your Message (e.g. awesome website and I want to work with you)"></textarea>
-                            <input type="submit" value="Send Messanger Pigeon" />
+                            <input type="submit" value="Send Messenger Pigeon" />
                             <p>(volume warning)</p>
                         </form>
                     </div>
