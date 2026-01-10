@@ -7,7 +7,7 @@
             "links": [
                 {
                     "id": 0,
-                    "name": "Live Demo",
+                    "name": "Live Demo (this site)",
                     "link": "https://rothpitou-portfolio.vercel.app"
                 },
                 {
@@ -20,9 +20,9 @@
     },
     {
         "pos": { "x": 0, "y": 840 },
-        "thumbnail": "portfolio-site-project",
+        "thumbnail": "hazard-detection-project",
         "data": {
-            "title": "IoT Hazard Detection and Alert System",
+            "title": "IoT Hazard Detection and Alert System (Collaborative Project)",
             "links": [
                 {
                     "id": 0,
@@ -39,7 +39,7 @@
     },
     {
         "pos": { "x": 0, "y": 1330 },
-        "thumbnail": "portfolio-site-project",
+        "thumbnail": "smart-traffic-project",
         "data": {
             "title": "IoT Smart Traffic System",
             "links": [
@@ -58,7 +58,7 @@
     },
     {
         "pos": { "x": 0, "y": 1820 },
-        "thumbnail": "portfolio-site-project",
+        "thumbnail": "2d-rpg-game-project",
         "data": {
             "title": "2D RPG Game",
             "links": [

@@ -59,6 +59,9 @@ export async function initGame(){ // async because we'll load json files
 
     // * projects thumbnailss
     k.loadSprite("portfolio-site-project", "./projects/portfolio-site-project.png");
+    k.loadSprite("hazard-detection-project", "./projects/weather-warning-project-diagram.png");
+    k.loadSprite("smart-traffic-project", "./projects/smart-traffic-project.png");
+    k.loadSprite("2d-rpg-game-project", "./projects/2d-rpg-game-project.png");
 
     // * skill logos
     // TODO add and subtract - maybe add a button to list the skills too cuz I aint drawing all that
