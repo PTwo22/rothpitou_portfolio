@@ -205,6 +205,7 @@ export async function initGame(){ // async because we'll load json files
     });
 
     // * Experience section
+    // TODO add logos of organisations
     makeSection(k, k.vec2(k.center().x + 400, k.center().y), generalData.section3Name, (parent) => {
         
         const container = parent.add([k.opacity(0), k.pos(0)]);

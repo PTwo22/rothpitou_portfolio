@@ -4,7 +4,7 @@
         "cardHeight": 250,
         "roleData": {
             "title": "Vehicle Control Team Member",
-            "description": "placeholder",
+            "description": "A developer of Team Swinburne FSAE autonomous car. Currently developing and integrating the car's pathfinding algorithm using computer vision, Python CV2, and is simulated/tested using the Robot Operating System (ROS).",
             "company": {
                 "name": "Swinburne Formula SAE",
                 "startDate": "September 2025",
@@ -17,7 +17,7 @@
         "cardHeight": 250,
         "roleData": {
             "title": "Creative Director",
-            "description": "placeholder",
+            "description": "Directed and storyboarded content creation for SCSA. Led the creative team and coordinated the division internally.",
             "company": {
                 "name": "Swinburne Cambodian Student Association (SCSA)",
                 "startDate": "July 2025",
@@ -30,7 +30,7 @@
         "cardHeight": 250,
         "roleData": {
             "title": "Creative Officer",
-            "description": "placeholder",
+            "description": "Event photographer and videographer, responsible for capturing moments during SCSA events and activities.",
             "company": {
                 "name": "Swinburne Cambodian Student Association (SCSA)",
                 "startDate": "March 2025",
@@ -43,7 +43,7 @@
         "cardHeight": 250,
         "roleData": {
             "title": "Volunteer & Peer Mentor",
-            "description": "placeholder",
+            "description": "Completed 60+ hours in assisting staff and students. Helped with operations and logistics. Mentored and guided commencing students with general and technical enquiries",
             "company": {
                 "name": "Swinburne University of Technology",
                 "startDate": "March 2025",
