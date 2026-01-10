@@ -68,14 +68,24 @@ export async function initGame(){ // async because we'll load json files
     // TO ADD (Tech): Java, C++, Docker, AWS, Arduino, SQL, PyTorch, TensorFlow, Kaplay
     // TO ADD (Skills): OOP, REST API, AI/ML, Game Dev, Web Dev, Computer Vision
     k.loadSprite("javascript-logo", "./logos/js-logo.png");
-    k.loadSprite("typescript-logo", "./logos/ts-logo.png");
     k.loadSprite("react-logo", "./logos/react-logo.png");
-    k.loadSprite("nextjs-logo", "./logos/nextjs-logo.png");
-    k.loadSprite("postgres-logo", "./logos/postgres-logo.png");
+    // k.loadSprite("postgres-logo", "./logos/postgres-logo.png");
     k.loadSprite("html-logo", "./logos/html-logo.png");
     k.loadSprite("css-logo", "./logos/css-logo.png");
-    k.loadSprite("tailwind-logo", "./logos/tailwind-logo.png");
     k.loadSprite("python-logo", "./logos/python-logo.png");
+    k.loadSprite("pytorch-logo", "./logos/pytorch-logo.png");
+    k.loadSprite("arduino-logo", "./logos/arduino-logo.png");
+    k.loadSprite("java-logo", "./logos/java-logo.png");
+    k.loadSprite("cpp-logo", "./logos/cpp-logo.png");
+    k.loadSprite("flask-logo", "./logos/flask-logo.png");
+
+    k.loadSprite("scikit-learn-logo", "./logos/scikit-learn-logo.png");
+    k.loadSprite("opencv-logo", "./logos/opencv-logo.png");
+    k.loadSprite("git-logo", "./logos/git-logo.png");
+
+    k.loadSprite("mysql-logo", "./logos/mysql-logo.png");
+    k.loadSprite("aws-logo", "./logos/aws-logo.png");
+    // k.loadSprite("docker-logo", "./logos/docker-logo.png");
    
     // TODO have water as the shader and overlay it with a tilemap/just map - add conlisions too
     // Load your 16x16 tiles

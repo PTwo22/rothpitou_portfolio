@@ -43,5 +43,95 @@
             "width": 128,
             "height": 128
         }
+    },
+    {
+        "pos": { "x": -400, "y": 0 },
+        "name": "Flask",
+        "logoData": {
+            "name": "flask-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": -400, "y": 200 },
+        "name": "Arduino",
+        "logoData": {
+            "name": "arduino-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": -200, "y": 200 },
+        "name": "Java",
+        "logoData": {
+            "name": "java-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": 0, "y": 200 },
+        "name": "C++",
+        "logoData": {
+            "name": "cpp-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": -400, "y": 400 },
+        "name": "PyTorch",
+        "logoData": {
+            "name": "pytorch-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": -200, "y": 400 },
+        "name": "Scikit Learn",
+        "logoData": {
+            "name": "scikit-learn-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": 0, "y": 400 },
+        "name": "OpenCV",
+        "logoData": {
+            "name": "opencv-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": -400, "y": -400 },
+        "name": "Git",
+        "logoData": {
+            "name": "git-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": -200, "y": -400 },
+        "name": "MySQL",
+        "logoData": {
+            "name": "mysql-logo",
+            "width": 128,
+            "height": 128
+        }
+    },
+    {
+        "pos": { "x": 0, "y": -400 },
+        "name": "AWS",
+        "logoData": {
+            "name": "aws-logo",
+            "width": 128,
+            "height": 128
+        }
     }
 ]
