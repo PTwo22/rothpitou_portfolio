@@ -31,6 +31,9 @@ export default function makeProjectCard(k, parent, posVec2, data, thumbnail) {
             width: 600,
             lineSpacing: 12,
         }),
+        // data.title === "under-development-project" 
+        //     ? k.color(k.Color.fromHex(PALETTE.colour1)) 
+        //     : k.color(k.Color.fromHex(PALETTE.colour3)),
         k.color(k.Color.fromHex(PALETTE.colour3)),
         k.pos(-310, 200),
         k.opacity(0),
